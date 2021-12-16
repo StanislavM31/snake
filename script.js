@@ -36,5 +36,12 @@ let snakeBody = [
     document.querySelector('[posX= "' + (coordinates[0] -1) + '"][posY = "' + coordinates[1] + '"]'),
     document.querySelector('[posX= "' + (coordinates[0] -2) + '"][posY = "' + coordinates[1] + '"]'),
 ];
+//присваиваем класс 'snakeBody' телу змеи
+for ( let i=0; i<snakeBody.length; i++) {
+    snakeBody[i].classList.add('snakeBody');
+}
+//присваиваем класс 'head' голове змеи
+snakeBody[0].classList.add('head');
+
 console.log(snakeBody);
 

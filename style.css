@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: aquamarine;
+    background-color: rgb(230, 238, 235);
 }
 
 .excel {
@@ -22,8 +22,9 @@ body {
 }
 
 .snakeBody {
-    background-color: chartreuse;
-    border-radius: 50%;
+    background-color: rgb(149, 218, 80);
+
+    border-radius: 10%;
 }
 .head {
     background-color: rgb(70, 117, 23);
