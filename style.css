@@ -20,3 +20,12 @@ body {
     height: 50px;
     padding: 5px;
 }
+
+.snakeBody {
+    background-color: chartreuse;
+    border-radius: 50%;
+}
+.head {
+    background-color: rgb(70, 117, 23);
+    border-radius: 10%;
+}
