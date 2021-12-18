@@ -26,8 +26,8 @@ for (let i=0; i<excel.length; i++) {
 }
 
 function generateSnake() {
-    let posX = Math.round(Math.random() * (10 - 1) + 1);
-    let posY = Math.round(Math.random() * (10 - 1) + 1);
+    let posX = Math.round(Math.random() * (10 - 3) + 3);
+    let posY = Math.round(Math.random() * (10 - 3) + 3);
     return [posX, posY];
 }
 let coordinates = generateSnake();
