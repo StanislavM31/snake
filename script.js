@@ -45,7 +45,7 @@ snakeBody[0].classList.add('head');
 
 console.log(snakeBody);
 
-let mouse;
+let apple;
 
 function createApple () {
     function generateApple() {
