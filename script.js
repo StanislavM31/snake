@@ -45,3 +45,15 @@ snakeBody[0].classList.add('head');
 
 console.log(snakeBody);
 
+let mouse;
+
+function createApple () {
+    function generateApple() {
+        let posX = Math.round(Math.random() * (10 - 3) + 3);
+        let posY = Math.round(Math.random() * (10 - 3) + 3);
+        return [posX, posY];
+    }
+    let appleCordinates = generateApple();
+    console.log(appleCordinates);
+}
+createApple();
