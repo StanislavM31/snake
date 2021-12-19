@@ -30,3 +30,8 @@ body {
     background-color: rgb(70, 117, 23);
     border-radius: 10%;
 }
+
+.apple {
+    background-color: red;
+    border-radius: 10%;
+}

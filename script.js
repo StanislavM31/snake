@@ -55,5 +55,7 @@ function createApple () {
     }
     let appleCordinates = generateApple();
     console.log(appleCordinates);
+    apple = document.querySelector('[posX= "' + appleCordinates[0] + '"][posY = "' + appleCordinates[1] + '"]');
+    apple.classList.add('apple');
 }
 createApple();
