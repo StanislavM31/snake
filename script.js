@@ -54,8 +54,16 @@ function createApple () {
         return [posX, posY];
     }
     let appleCordinates = generateApple();
-    console.log(appleCordinates);
+    
     apple = document.querySelector('[posX= "' + appleCordinates[0] + '"][posY = "' + appleCordinates[1] + '"]');
+
+    while(apple.classList.contains('snakeBody')) {
+        let appleCordinates = generateApple();
+        apple = document.querySelector('[posX= "' + appleCordinates[0] + '"][posY = "' + appleCordinates[1] + '"]');
+    }
+
     apple.classList.add('apple');
 }
+
 createApple();
+
