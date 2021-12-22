@@ -89,16 +89,16 @@ function move() {
 let interval = setInterval(move, 300);
 
 window.addEventListener('keydown', function (e) {
-    if (e.keyCode == 37) {
-        console.log('left');
+    if (e.keyCode == 37 && direction!= 'right') {
+        console.log('true');
     }
-    else if(e.keyCode == 38) {
-        console.log('up');
+    else if(e.keyCode == 38 && direction!= 'down') {
+        console.log('true');
     }
-    else if(e.keyCode == 39) {
-        console.log('right');
+    else if(e.keyCode == 39 && direction!= 'left') {
+        console.log('true');
     }
-    else if(e.keyCode == 40) {
-        console.log('down');
+    else if(e.keyCode == 40 && direction!= 'up') {
+        console.log('true');
     }
 });
