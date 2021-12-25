@@ -101,7 +101,13 @@ function move() {
         } else {
             snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "10"]'));
         }
-        
+        //сопадение координат
+        //1.яблоко должно исчезнуть
+        //2.змея должна увеличиться
+        //3.создание нового яблока
+    }
+    if (snakeBody[0].getAttribute('posX') == apple.getAttribute('PosX')&&snakeBody[0].getAttribute('posY') == apple.getAttribute('PosY')){
+        console.log(true);
     }
 
     snakeBody[0].classList.add('head');
