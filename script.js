@@ -108,6 +108,11 @@ function move() {
     }
     if (snakeBody[0].getAttribute('posX') == apple.getAttribute('PosX')&&snakeBody[0].getAttribute('posY') == apple.getAttribute('PosY')){
         console.log(true);
+        apple.classList.remove('apple');
+        let a = snakeBody[snakeBody.length-1].getAttribute('posX');
+        let b = snakeBody[snakeBody.length-1].getAttribute('posY');
+        snakeBody.push(document.querySelector('[posX = "' + a + '"][posY = "' + b + '"]'));
+        createApple();
     }
 
     snakeBody[0].classList.add('head');
