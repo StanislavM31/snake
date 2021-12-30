@@ -67,6 +67,7 @@ function createApple () {
 
 createApple();
 let direction = 'right';
+let steps = false;
 
 function move() {
     let snakeCoordinates = [snakeBody[0].getAttribute('posX'), snakeBody[0].getAttribute('posY')];
@@ -111,7 +112,9 @@ function move() {
         createApple();
     }
     if (snakeBody[0].classList.contains('snakeBody')) {
-        alert('Игра окончена');
+        setTimeout(() => {
+            alert('Игра окончена');
+        }, 200);
         clearInterval(interval);
         snakeBody[0].style.background = 'black';
         //меняет цвет головы при окончании игры
@@ -121,21 +124,28 @@ function move() {
     for ( let i = 0; i<snakeBody.length; i++) {
         snakeBody[i].classList.add('snakeBody');
     }
+    steps = true;
 }
 
 let interval = setInterval(move, 300);
 
 window.addEventListener('keydown', function (e) {
-    if (e.keyCode == 37 && direction!= 'right') {
-        direction = 'left';
-    }
-    else if(e.keyCode == 38 && direction!= 'down') {
-        direction = 'up';
-    }
-    else if(e.keyCode == 39 && direction!= 'left') {
-        direction = 'right';
-    }
-    else if(e.keyCode == 40 && direction!= 'up') {
-        direction = 'down';
+    if( steps==true) {
+        if (e.keyCode == 37 && direction!= 'right') {
+            direction = 'left';
+            steps = false;
+        }
+        else if(e.keyCode == 38 && direction!= 'down') {
+            direction = 'up';
+            steps = false;
+        }
+        else if(e.keyCode == 39 && direction!= 'left') {
+            direction = 'right';
+            steps = false;
+        }
+        else if(e.keyCode == 40 && direction!= 'up') {
+            direction = 'down';
+            steps = false;
+        }
     }
 });
