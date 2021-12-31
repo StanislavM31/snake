@@ -69,6 +69,18 @@ createApple();
 let direction = 'right';
 let steps = false;
 
+let input = document.createElement('input');
+document.body.appendChild(input);
+input.style.cssText = `
+    margin:auto;
+    margin-top: 20px;
+    font-size: 25px;
+    display: block;
+`;
+
+let score = 0;
+input.value = `Score: ${score}`;
+
 function move() {
     let snakeCoordinates = [snakeBody[0].getAttribute('posX'), snakeBody[0].getAttribute('posY')];
     snakeBody[0].classList.remove('head');
@@ -110,6 +122,9 @@ function move() {
         let b = snakeBody[snakeBody.length-1].getAttribute('posY');
         snakeBody.push(document.querySelector('[posX = "' + a + '"][posY = "' + b + '"]'));
         createApple();
+        score++;
+        input.value = `Score: ${score}`;
+
     }
     if (snakeBody[0].classList.contains('snakeBody')) {
         setTimeout(() => {
