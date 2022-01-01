@@ -128,7 +128,7 @@ function move() {
     }
     if (snakeBody[0].classList.contains('snakeBody')) {
         setTimeout(() => {
-            alert('Игра окончена');
+            alert(`Your score: ${score}`);
         }, 200);
         clearInterval(interval);
         snakeBody[0].style.background = 'black';
